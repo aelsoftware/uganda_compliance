@@ -10,7 +10,7 @@ from uganda_compliance.efris.utils.utils import efris_log_error
 from .request_utils import fetch_data, guidv4, post_req
 from cryptography.hazmat.primitives import hashes
 import json
-from uganda_compliance.efris.efris.doctype.e_invoicing_settings.e_invoicing_settings import get_mode_decrypted_password
+from uganda_compliance.efris.doctype.e_invoicing_settings.e_invoicing_settings import get_mode_decrypted_password
 
 
 def encrypt_aes_ecb(data, key):
