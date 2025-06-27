@@ -27,7 +27,7 @@ frappe.ui.form.on('Warehouse', {
                         console.log("Company:", company);
                         
                         frappe.call({
-                            method: 'uganda_compliance.efris.api_classes.e_goods_services.has_efris_item_in_stock_ledger_entry',
+                            method: 'uganda_compliance.efris.efrisapi_classes.e_goods_services.has_efris_item_in_stock_ledger_entry',
                             args: {
                                 warehouse: warehouse_name,
                                 company: company                   

@@ -6,11 +6,11 @@ from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.serialization import pkcs12
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric import padding as asym_padding
-from uganda_compliance.efris.utils.utils import efris_log_error
+from uganda_compliance.efris.efrisutils.utils import efris_log_error
 from .request_utils import fetch_data, guidv4, post_req
 from cryptography.hazmat.primitives import hashes
 import json
-from uganda_compliance.efris.doctype.e_invoicing_settings.e_invoicing_settings import get_mode_decrypted_password
+from uganda_compliance.efris.efrisdoctype.e_invoicing_settings.e_invoicing_settings import get_mode_decrypted_password
 
 
 def encrypt_aes_ecb(data, key):

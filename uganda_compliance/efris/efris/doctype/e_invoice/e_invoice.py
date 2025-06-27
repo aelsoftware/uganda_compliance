@@ -11,9 +11,9 @@ from frappe import _
 from json import JSONEncoder
 from frappe.model.document import Document
 from datetime import datetime
-from uganda_compliance.efris.utils.utils import efris_log_info
-from uganda_compliance.efris.doctype.e_invoicing_settings.e_invoicing_settings import get_e_company_settings
-from uganda_compliance.efris.api_classes.e_invoice import EInvoiceAPI, decode_e_tax_rate, validate_company
+from uganda_compliance.efris.efrisutils.utils import efris_log_info
+from uganda_compliance.efris.efrisdoctype.e_invoicing_settings.e_invoicing_settings import get_e_company_settings
+from uganda_compliance.efris.efrisapi_classes.e_invoice import EInvoiceAPI, decode_e_tax_rate, validate_company
 
 CONST_EFRIS_PAYMENT_MODE_CREDIT = "Credit"
 CONST_EFRIS_PAYMENT_MODE_CREDIT_CODE = "101"

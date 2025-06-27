@@ -72,7 +72,7 @@ function set_item_tax_template(frm){
                             console.log(`Item E Company is ${company}`);
                             
                             frappe.call({
-                                method: 'uganda_compliance.efris.api_classes.e_goods_services.get_item_tax_template',
+                                method: 'uganda_compliance.efris.efrisapi_classes.e_goods_services.get_item_tax_template',
                                 args: {
                                     company: company,
                                     e_tax_category: e_tax_category
@@ -110,7 +110,7 @@ frappe.ui.form.on('Item', {
             console.log("Item is EFRIS tracked and registered. Proceeding to create item prices...");
 
             frappe.call({
-                method: 'uganda_compliance.efris.api_classes.e_goods_services.create_item_prices',
+                method: 'uganda_compliance.efris.efrisapi_classes.e_goods_services.create_item_prices',
                 args: {
                     item_code: frm.doc.item_code,
                     uoms: frm.doc.uoms,

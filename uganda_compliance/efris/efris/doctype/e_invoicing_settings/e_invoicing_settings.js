@@ -21,7 +21,7 @@ frappe.ui.form.on('E Invoicing Settings', {
     
     test_connection: function(frm) {
         frappe.call({
-            method: 'uganda_compliance.efris.api_classes.e_company.check_efris_company',
+            method: 'uganda_compliance.efris.efrisapi_classes.e_company.check_efris_company',
             args: {
                 'tax_id': frm.doc.tin,
                 'company_name': frm.doc.company_name

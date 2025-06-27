@@ -2,16 +2,16 @@ import six
 import frappe
 import json
 from frappe import _
-from uganda_compliance.efris.api_classes.efris_api import make_post
-from uganda_compliance.efris.utils.utils import efris_log_info, safe_load_json, efris_log_error
-from uganda_compliance.efris.api_classes.request_utils import get_ug_time_str
+from uganda_compliance.efris.efrisapi_classes.efris_api import make_post
+from uganda_compliance.efris.efrisutils.utils import efris_log_info, safe_load_json, efris_log_error
+from uganda_compliance.efris.efrisapi_classes.request_utils import get_ug_time_str
 from datetime import datetime
-from uganda_compliance.efris.utils.utils import get_qr_code
+from uganda_compliance.efris.efrisutils.utils import get_qr_code
  
 from frappe.utils.user import get_users_with_role
-from uganda_compliance.efris.doctype.e_invoicing_settings.e_invoicing_settings import get_e_company_settings
-from uganda_compliance.efris.doctype.e_invoice_request_log.e_invoice_request_log import log_request_to_efris
-from uganda_compliance.efris.doctype.e_invoicing_settings.e_invoicing_settings import get_e_company_settings, get_mode_private_key_path
+from uganda_compliance.efris.efrisdoctype.e_invoicing_settings.e_invoicing_settings import get_e_company_settings
+from uganda_compliance.efris.efrisdoctype.e_invoice_request_log.e_invoice_request_log import log_request_to_efris
+from uganda_compliance.efris.efrisdoctype.e_invoicing_settings.e_invoicing_settings import get_e_company_settings, get_mode_private_key_path
 
 class EInvoiceAPI:
 	@staticmethod

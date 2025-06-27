@@ -129,7 +129,7 @@ async function set_efris_fields_for_row(frm, cdt, cdn) {
     if (row.efris_purchase_receipt_no) {
         try {
             let response = await frappe.call({
-                method: 'uganda_compliance.efris.api_classes.stock_in.get_efris_unit_price',
+                method: 'uganda_compliance.efris.efrisapi_classes.stock_in.get_efris_unit_price',
                 args: {
                     purchase_receipt_no: row.efris_purchase_receipt_no,
                     item_code: row.item_code

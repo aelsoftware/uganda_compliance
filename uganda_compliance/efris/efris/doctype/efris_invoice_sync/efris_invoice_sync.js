@@ -7,7 +7,7 @@ frappe.ui.form.on('EFRIS invoice Sync', {
 	},
 	sync_invoice:function(frm){
 		frappe.call({
-			'method':'uganda_compliance.efris.api_classes.efris_invoice_sync.efris_invoice_sync',
+			'method':'uganda_compliance.efris.efrisapi_classes.efris_invoice_sync.efris_invoice_sync',
 			callback: function (r) {
 				if (r.message) {
 					frappe.msgprint(r.message);

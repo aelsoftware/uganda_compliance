@@ -117,7 +117,7 @@ async function set_document_exchange_rate(frm) {
 async function fetch_exchange_rate(currency, company, frm) {
     return new Promise((resolve) => {
         frappe.call({
-            method: 'uganda_compliance.efris.api_classes.stock_in.query_currency_exchange_rate',
+            method: 'uganda_compliance.efris.efrisapi_classes.stock_in.query_currency_exchange_rate',
             args: {
                 doc: JSON.stringify({
                     currency: currency,
@@ -145,7 +145,7 @@ function check_efris_stockin(frm, cdt, cdn) {
     return new Promise((resolve) => {
         if (row.warehouse && row.item_code) {
             frappe.call({
-                method: 'uganda_compliance.efris.api_classes.e_goods_services.check_efris_item_for_purchase_receipt',
+                method: 'uganda_compliance.efris.efrisapi_classes.e_goods_services.check_efris_item_for_purchase_receipt',
                 args: {
                     accept_warehouse: row.warehouse,
                     item_code: row.item_code
