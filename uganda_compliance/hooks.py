@@ -313,27 +313,17 @@ doctype_list_js = {
 
 }
    
+
+
+
 fixtures = [
-    # ✅ Pull all your custom DocTypes from EFRIS module
-    {
-        "doctype": "DocType",
-        "filters": {
-            "module": ["=", "EFRIS"]
-        }
-    },
-    # ✅ Pull all Custom Fields related to EFRIS (optional but useful)
-    {
-        "doctype": "Custom Field",
-        "filters": {
-            "dt": ["like", "EFRIS%"]
-        }
-    },
-    # ✅ Core ERPNext DocTypes (these won't fail)
+    # "E Tax Category", 
+    # "EFRIS Commodity Code",
     "UOM",
     {
         "doctype": "Print Format",
         "filters": {
-            "name": ["in", ["EFRIS E Invoice", "EFRIS Sales Invoice", "POS EFRIS Invoice"]]
+            "name": ["in", ["EFRIS E Invoice", "EFRIS Sales Invoice","POS EFRIS Invoice"]]
         }
     },
     {
@@ -347,5 +337,7 @@ fixtures = [
         "filters": {
             "efris_currency_code": ["!=", None]
         }
-    }
+    },
+    # "EFRIS Payment Mode"
 ]
+
