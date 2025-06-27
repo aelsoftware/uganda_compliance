@@ -1,7 +1,7 @@
 import frappe
 from frappe.model.document import Document
 from frappe import _
-from uganda_compliance.efrisutils.utils import efris_log_info, efris_log_error
+from uganda_compliance.efris.utils.utils import efris_log_info, efris_log_error
 
 from frappe.utils.password import get_decrypted_password, set_encrypted_password    
 
