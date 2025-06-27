@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "autoname": "EINV-REQ-.#####",
+ "creation": "2024-07-30 12:54:08.175992",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "timestamp",
+  "column_break_yuehm",
+  "reference_doc_type",
+  "reference_document",
+  "section_break_hc9fl",
+  "request_full",
+  "request_data",
+  "response_full",
+  "response_data"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "request_full",
+   "fieldtype": "Code",
+   "label": "Request Full",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "request_data",
+   "fieldtype": "Code",
+   "label": "Request Data",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_full",
+   "fieldtype": "Code",
+   "label": "Response Full",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "fieldname": "response_data",
+   "fieldtype": "Code",
+   "label": "Response Data",
+   "options": "JSON",
+   "read_only": 1
+  },
+  {
+   "columns": 4,
+   "default": "Now",
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp"
+  },
+  {
+   "columns": 2,
+   "fieldname": "reference_doc_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reference Doctype",
+   "options": "DocType",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "reference_document",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Reference Document",
+   "options": "reference_doc_type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_yuehm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hc9fl",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-02 03:04:46.382001",
+ "modified_by": "Administrator",
+ "module": "EFRIS",
+ "name": "E Invoice Request Log",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
