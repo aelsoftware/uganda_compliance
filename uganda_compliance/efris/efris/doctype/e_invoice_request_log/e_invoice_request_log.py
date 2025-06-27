@@ -13,7 +13,7 @@ def log_request_to_efris(request_data, request_full, response_data, response_ful
     try:        
         # Enqueue the logging operation
         enqueue(
-            "uganda_compliance.efris.efrisdoctype.e_invoice_request_log.e_invoice_request_log.enqueue_log_request",
+            "uganda_compliance.efris.efris.doctype.e_invoice_request_log.e_invoice_request_log.enqueue_log_request",
             queue="short",
             request_data=request_data,
             request_full=request_full,

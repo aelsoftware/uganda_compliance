@@ -1,11 +1,11 @@
 import frappe
 from frappe import _
-from uganda_compliance.efris.efrisapi_classes.efris_api import make_post
-from uganda_compliance.efris.efrisutils.utils import efris_log_info, efris_log_error
+from uganda_compliance.efris.api_classes.efris_api import make_post
+from uganda_compliance.efrisutils.utils import efris_log_info, efris_log_error
 
 from datetime import datetime, timedelta
 
-from uganda_compliance.efris.efrisapi_classes.e_invoice import EInvoiceAPI
+from uganda_compliance.efris.api_classes.e_invoice import EInvoiceAPI
 
 
 @frappe.whitelist()

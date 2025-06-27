@@ -1,6 +1,6 @@
 import frappe
-from uganda_compliance.efris.efrisutils.utils import efris_log_info, efris_log_error
-from uganda_compliance.efris.efrisapi_classes.efris_api import make_post
+from uganda_compliance.efrisutils.utils import efris_log_info, efris_log_error
+from uganda_compliance.efris.api_classes.efris_api import make_post
 import json
 from datetime import date
 

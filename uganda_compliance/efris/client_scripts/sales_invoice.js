@@ -16,7 +16,7 @@ frappe.ui.form.on('Sales Invoice', {
 
                         try {
                             await frappe.call({
-                                method: 'uganda_compliance.efris.efrisapi_classes.e_invoice.confirm_irn_cancellation',
+                                method: 'uganda_compliance.efris.api_classes.e_invoice.confirm_irn_cancellation',
                                 args: { sales_invoice: frm.doc },
                                 freeze: false, 
                                 callback: function(r) {
@@ -161,7 +161,7 @@ function set_efris_invoice_details(frm) {
 
         try {
             const response = frappe.call({
-                method: 'uganda_compliance.efris.efrisdoctype.e_invoicing_settings.e_invoicing_settings.get_e_tax_template',
+                method: 'uganda_compliance.efris.efris.doctype.e_invoicing_settings.e_invoicing_settings.get_e_tax_template',
                 args: { company_name: frm.doc.company, tax_type: 'Sales Tax' },
                 freeze: false 
             });
@@ -226,7 +226,7 @@ function handle_update_stock_setting(frm) {
     
     if (is_efris_invoice) {
         frappe.call({
-            method: "uganda_compliance.efris.efrisdoctype.e_invoicing_settings.e_invoicing_settings.get_e_company_settings",
+            method: "uganda_compliance.efris.efris.doctype.e_invoicing_settings.e_invoicing_settings.get_e_company_settings",
             args: { company_name: frm.doc.company },
             callback: function(r) {
                 if (r.message && r.message.enforce_update_stock == 1) {
