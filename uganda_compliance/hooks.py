@@ -317,8 +317,8 @@ doctype_list_js = {
 
 
 fixtures = [
-    # "E Tax Category", 
-    # "EFRIS Commodity Code",
+    "E Tax Category", 
+    "EFRIS Commodity Code",
     "UOM",
     {
         "doctype": "Print Format",
@@ -338,6 +338,6 @@ fixtures = [
             "efris_currency_code": ["!=", None]
         }
     },
-    # "EFRIS Payment Mode"
+    "EFRIS Payment Mode"
 ]
 
